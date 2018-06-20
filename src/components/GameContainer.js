@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Header from "./Header/Header";
+import Jumbotron from "./Jumbotron/Jumbotron";
 import picturesJson from "../pictures.json";
 import PictureCard from "./PictureCard";
+import Footer from "./Footer/Footer";
 
 class GameContainer extends Component {
     state = {
@@ -68,6 +70,16 @@ class GameContainer extends Component {
 
     }
 
+    // Was trying to do a ternary operator within the render component but couldn't get it to work
+    renderWinMessage = () => {
+        if (this.state.topScore === 12) {
+            return <div className="win-message">
+                <h2>You win!</h2>
+                <p>Guess you're not a visual racist, after all!</p>
+            </div>
+        }
+    }
+
     render() {
         return (
             <div>
@@ -78,12 +90,16 @@ class GameContainer extends Component {
                     resetGame={this.resetGame}
                 />
 
+                <Jumbotron />
+
                 {this.state.pictures.map((picture, i) => <PictureCard
                     image={picture.image}
                     key={picture.id}
                     id={i}
                     onClick={this.handlePictureClick}
                 />)}
+
+                <Footer />
             </div>
         );
     }

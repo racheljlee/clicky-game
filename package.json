@@ -6,8 +6,10 @@
   "dependencies": {
     "gh-pages": "^1.2.0",
     "react": "^16.4.1",
+    "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-sticky": "^6.0.2"
   },
   "scripts": {
     "predeploy": "npm run build",

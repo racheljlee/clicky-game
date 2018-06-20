@@ -1,10 +1,10 @@
 .girl-container {
     text-align: center;
     display: inline-block;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
 }
 .girl {
     padding: 5px;
     border: 2px solid #eee;
-    height: 175px;
+    height: 200px;
 }
